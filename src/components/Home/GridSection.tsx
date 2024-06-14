@@ -42,7 +42,7 @@ export function GridSection() {
   return (
     <section className="grid-section flex flex-col gap-10 conversion-container">
       <h3
-        className={`${excon.className} flex flex-col items-center text-[48px] leading-[1] text-center font-bold`}
+        className={`${excon.className} flex flex-col items-center text-[24px] md:text-[48px] leading-[1] text-center font-bold`}
       >
         {headings.map((heading, index) => (
           <motion.span
