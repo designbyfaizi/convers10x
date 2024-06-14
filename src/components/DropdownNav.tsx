@@ -6,6 +6,11 @@ import { usePathname } from "next/navigation";
 
 const dropdownList = [
   {
+    id: 0,
+    name: "Home",
+    href: "/",
+  },
+  {
     id: 1,
     name: "About Us",
     href: "/about",
@@ -65,15 +70,15 @@ function DropdownNav({
         }}
         className="fixed w-screen h-dvh left-0 top-0 z-50"
       >
-        <div className="fixed w-full h-dvh bg-neutral-100/80 backdrop-blur-lg"></div>
+        <div className="fixed w-full h-dvh bg-neutral-950/80 backdrop-blur-lg"></div>
         <div className="flex flex-col items-end gap-4 conversion-container py-4">
           <button
             onClick={() => setDropdownOpen(false)}
-            className="relative z-[60] aspect-square p-2 m-2 bg-neutral-200 rounded-full text-neutral-700 hover:bg-neutral-300"
+            className="relative z-[60] aspect-square p-2 m-2 bg-neutral-900 rounded-full text-neutral-400 hover:bg-neutral-700"
           >
             <Cross />
           </button>
-          <ul className="dropdown w-full min-w-[240px] flex flex-col gap-4 relative z-[60] bg-neutral-100 text-black p-4 rounded-xl max-w-[320px]">
+          <ul className="dropdown w-full min-w-[240px] flex flex-col gap-4 relative z-[60] bg-neutral-800 text-neutral-300 rounded-xl p-2 py-4 max-w-[320px]">
             {dropdownList.map((item, index) => {
               return (
                 <motion.li
@@ -85,10 +90,10 @@ function DropdownNav({
                   }}
                   custom={index}
                   key={item.id}
-                  className="hover:scale-105"
+                  className=""
                 >
                   <Link
-                    className="px-4 py-2 hover:text-accent transition-all duration-75"
+                    className="p-4 text-2xl hover:text-accent transition-all duration-75"
                     href={item.href}
                     onClick={() => setDropdownOpen(false)}
                   >
