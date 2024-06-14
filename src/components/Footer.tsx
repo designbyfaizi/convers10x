@@ -12,7 +12,7 @@ function Footer({ className }: { className: string }) {
     >
       <div className="inner conversion-container flex flex-col items-center gap-4">
         <SiteLogo />
-        <p>Copyright © 2024 Conversion 10x. | All Rights Reserved</p>
+        <p className="text-center">Copyright © 2024 Conversion 10x. | All Rights Reserved</p>
       </div>
     </footer>
   );
