@@ -3,6 +3,7 @@ import { Variants, motion } from "framer-motion";
 import Link from "next/link";
 import React, { useEffect } from "react";
 import { usePathname } from "next/navigation";
+import { excon } from "@/app/fonts";
 
 const dropdownList = [
   {
@@ -93,7 +94,7 @@ function DropdownNav({
                   className=""
                 >
                   <Link
-                    className="p-4 text-2xl hover:text-accent transition-all duration-75"
+                    className={`${excon.className} p-4 text-2xl font-bold hover:text-accent transition-all duration-75`}
                     href={item.href}
                     onClick={() => setDropdownOpen(false)}
                   >
